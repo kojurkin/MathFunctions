@@ -22,7 +22,7 @@ public class FractionFunction implements RealArgumentFunction{
     }
     @Override
     public double getResult(double x) {
-        if(x > leftBound && x < rightBound) {
+        if(x >= leftBound && x <= rightBound) {
             return ((coefficientA * x + coefficientB) / (coefficientC * x + coefficientD));
         } else {
             throw new IllegalArgumentException("x isn`t belongs to the segment");
